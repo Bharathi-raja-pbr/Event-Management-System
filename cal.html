@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Event to Calendar</title>
+</head>
+<body>
+  <h1>Add Event to Calendar</h1>
+  <p>Click the button below to add this event to your calendar:</p>
+  <button onclick="addToCalendar()">Add to Calendar</button>
+  <script>
+    function addToCalendar() {
+      var event = {
+        title: "Event Title",
+        description: "Event Description",
+        location: "Event Location",
+        start: "2023-05-15T14:00:00",
+        end: "2023-05-15T16:00:00"
+      };
+      var calendarLink = "data:text/calendar;charset=utf-8," + escape(createCalendarEvent(event));
+      window.open(calendarLink, "_blank");
+    }
+    function createCalendarEvent(event) {
+      var calendarEvent = "BEGIN:VCALENDAR\n" +
+                          "VERSION:2.0\n" +
+                          "BEGIN:VEVENT\n" +
+                          "SUMMARY:" + event.title + "\n" +
+                          "DESCRIPTION:" + event.description + "\n" +
+                          "LOCATION:" + event.location + "\n" +
+                          "DTSTART:" + event.start + "\n" +
+                          "DTEND:" + event.end + "\n" +
+                          "END:VEVENT\n" +
+                          "END:VCALENDAR";
+      return calendarEvent;
+    }
+  </script>
+</body>
+</html>

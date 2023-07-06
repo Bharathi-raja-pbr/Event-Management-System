@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="style 2.css">
+	
+	<title>Responsive Login And Register Form</title>
+</head>
+<body>
+	
+	<div class="container">
+		<form action="#" class="login active" onsubmit="event.preventDefault();">
+			<h2 class="title">Login with your account</h2>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<div class="input-group">
+					<input type="email" id="email" placeholder="Email address">
+					<i class='bx bx-envelope'></i>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<div class="input-group">
+					<input type="password" pattern=".{8,}" id="password" placeholder="Your password">
+					<i class='bx bx-lock-alt' ></i>
+				</div>
+				<span class="help-text">At least 8 characters</span>
+			</div>
+			<button type="submit" class="btn-submit" onclick="checkValidLogin()">Login</button>
+			<a href="#">Forgot password?</a>
+			<p>I don't have an account. <a href="signin.html" onclick="switchForm('register', event)">Register</a></p>
+		</form>
+
+		<form method="post" action="#" class="register">
+			<label for="first_name">First Name:</label>
+			<input type="text" id="first_name" name="first_name" required>
+			<br>
+			<label for="last_name">Last Name:</label>
+			<input type="text" id="last_name" name="last_name" required>
+			<br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+			<br>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+			<br>
+			<label for="confirm_password">Confirm Password:</label>
+			<input type="password" id="confirm_password" name="confirm_password" required>
+			<label for="dob">Date of Birth:</label>
+			<input type="date" id="dob" name="dob" required>
+			<br>
+			<br>
+			<label for="dob">City:</label>
+			<input list="cities" name="city" id="city" placeholder="City">
+			<datalist id="cities">
+				<option value="Chennai">Chennai</option>
+				<option value="Bengaluru">Bengaluru</option>
+				<option value="Hyderabad">Hyderabad</option>
+				<option value="Mumbai">Mumbai</option>
+			</datalist><br>
+			<br>
+			
+		
+			<input type="submit" value="Sign Up">
+		  </form>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

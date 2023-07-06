@@ -1,0 +1,27 @@
+
+
+.signup input{
+    padding: 15px 15px;
+    width: 80%;
+    margin: 15px;
+}
+
+
+
+body {
+	background:lightblue;
+}
+
+  .signup{
+    max-width: 500px;
+	width: 100%;
+	position: relative;
+  }
+
+  form {
+	width: 100%;
+	padding: 28px;
+	border-radius: 12px;
+	background:#fff;
+	position: absolute;
+}

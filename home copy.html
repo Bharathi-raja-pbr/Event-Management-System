@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+    .rollover {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      max-width: 300px;
+      margin: 20px;
+    }
+
+    .rollover img {
+      transition: transform 0.5s ease;
+    }
+    .rollover:hover img {
+      transform: scale(1.2);
+    }
+    .rollover .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+    .rollover:hover .caption {
+      opacity: 1;
+    }
+    .search-container {
+      float: right;
+      margin-right: 20px;
+      margin-top: 10px;
+    }
+    .search-container input[type=text] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+      width: 200px;
+      background: #f1f1f1;
+    }
+    .search-container button {
+      float: right;
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    .search-container button:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EVENT MANAGERS</h1>
+	<img  clas="logo" src="logo.png" height="100px" width="120px" >
+    <div class="search-container">
+      <form>
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="request.html">Contact Us</a>
+    <a href="events.html">Events</a>
+    <a href=#>Users</a>
+    <a href="#">About Us</a>
+  </nav>
+  <div class="rollover">
+    <img src="valo.jpeg" alt="Image 1">
+    <div class="caption">GAMING</div>
+  </div>
+  <div class="rollover">
+    <img src="ds.jpeg" alt="Image 2">
+    <div class="caption">COURSES</div>
+  </div>
+  <div class="rollover">
+    <img src="eventlogo.png" alt="Image 2">
+    <div class="caption">FESTS</div>
+  </div>
+  <div class="rollover">
+    <img src="download.jpeg" alt="Image 2">
+    <div class="caption">MUSIC</div>
+  </div>
+  <div class="rollover">
+    <img src="csk.jpeg" alt="Image 2">
+    <div class="caption">SPORTS</div>
+  </div>
+  <div class="rollover">
+    <img src="vr.jpeg" alt="Image 2">
+    <div class="caption">WORKSHOPS</div>
+  </div>
+  <div class="rollover">
+    <img src="food.jpeg" alt="Image 2">
+    <div class="caption">FOOD FEST</div>
+  </div>
+  <div class="rollover">
+    <img src="book.jpeg" alt="Image 2">
+    <div class="caption">BOOK FAIR</div>
+  </div>
+  <script>
+    const form = document.querySelector('form');
+    const input = document.querySelector('input[type="text"]');
+    
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+	  const searchTerm = input.value.trim().toLowerCase();
+      
+      // Perform search logic here
+      
+      input.value = '';
+    });
+  </script>
+  
+</body>
+</html>
+

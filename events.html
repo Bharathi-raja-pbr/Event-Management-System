@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events</title>
+        <link rel="stylesheet" href="eventstyles.css">
+
+        <script>
+          function addToCalendar() {
+            var event = {
+              title: "Event Title",
+              description: "Event Description",
+              location: "Event Location",
+              start: "2023-05-15T14:00:00",
+              end: "2023-05-15T16:00:00"
+            };
+            var calendarLink = "data:text/calendar;charset=utf-8," + escape(createCalendarEvent(event));
+            window.open(calendarLink, "_blank");
+          }
+          function createCalendarEvent(event) {
+            var calendarEvent = "BEGIN:VCALENDAR\n" +
+                                "VERSION:2.0\n" +
+                                "BEGIN:VEVENT\n" +
+                                "SUMMARY:" + event.title + "\n" +
+                                "DESCRIPTION:" + event.description + "\n" +
+                                "LOCATION:" + event.location + "\n" +
+                                "DTSTART:" + event.start + "\n" +
+                                "DTEND:" + event.end + "\n" +
+                                "END:VEVENT\n" +
+                                "END:VCALENDAR";
+            return calendarEvent;
+          }
+        </script>
+
+    </head>
+    <body>
+        <img  clas="logo" src="logo.png" height="100px" width="120px" >
+        <div class="container">
+          <form class="form">
+            <input type="text" placeholder="Search...">
+            <select>
+              <option value="">All Categories</option>
+              <option value="music">Music</option>
+              <option value="comedy">Comedy</option>
+              <option value="sports">Sports</option>
+            </select>
+            <input type="submit" value="Search">
+          </form>
+          <nav>
+            <a href="home.html">Home</a>
+            <a href="request.html">Contact Us</a>
+            <a href="events.html">Events</a>
+            <a href="#">About Us</a>
+          </nav>
+        <div class="card">
+          <img src="download.jpeg" alt="Event Image">
+          <div>
+              <h2>Mayanadhi by Pradeep Kumar</h2>
+              <p>Date: June 1, 2023</p>
+              <p>Time: 7:00 PM</p>
+              <p>Venue: Nehru Stadium</p>
+              <p>Category: Music</p>
+              <br>
+              <a href="mayanadhi.html">View Event</a>
+              <button onclick="addToCalendar()">Add to Calendar</button>
+
+          </div>
+      </div>
+      
+      <div class="card">
+          <img src="csk.jpeg" alt="Event Image">
+          <div>
+              <h2>TATA IPL : CSK vs MI</h2>
+              <p>Date: may 10, 2023</p>
+              <p>Time: 2:00 PM</p>
+              <p>Venue: MAC stadium,chennai</p>
+              <p>Category: Sports</p>
+              <br>
+              <a href="ipl.html">View Event</a>
+              <button onclick="addToCalendar()">Add to Calendar</button>
+          </div>
+      </div>
+      
+      <div class="card">
+          <img src="ds.jpeg" alt="Event Image">
+          <div>
+              <h2>Introduction to DataScience and ML</h2>
+              <p>Date:may 14 - may 20,2023</p>
+              <p>Time: 4:00 - 6:00 PM</p>
+              <p>mode:online </p>
+              <p>platform:MS Teams</p>
+              <p>Category: Courses</p>
+              <br>
+              <a href="ds.html">View Event</a>
+              <button onclick="addToCalendar()">Add to Calendar</button>
+          </div>
+      </div>
+
+      <div class="card">
+        <img src="lol.jpeg" alt="Event Image">
+        <div>
+            <h2>LOL from Home</h2>
+            <p>Date: June 3, 2023</p>
+            <p>Time: 4:00 - 6:00 PM</p>
+            <p>mode:online </p>
+            <p>platform:Zoom</p>
+            <p>Category: Comedy</p>
+            <br>
+            <a href="lol.html">View Event</a>
+            <button onclick="addToCalendar()">Add to Calendar</button>
+            
+        </div>
+    </div>
+
+    <div class="card">
+      <img src="vr.jpeg" alt="Event Image">
+      <div>
+          <h2>Hands-on Workshop on AR & VR</h2>
+          <p>Date: June 3 - June 10, 2023</p>
+          <p>Time: 9:00 AM-3:30 PM</p>
+          <p>Venue: Ssn college of engineering</p>
+          <p>Category: Workshop</p>
+          <br>
+          <a href="vr.html">View Event</a>
+          <button onclick="addToCalendar()">Add to Calendar</button>
+      </div>
+  </div>
+
+  <div class="card">
+    <img src=" valo.jpeg" alt="Event Image">
+    <div>
+        <h2>ValoFest</h2>
+        <p>Date: June 13, 2023</p>
+        <p>Time: 10:00 - 1:00 PM</p>
+        <p>Venue: Ultimate gamers studio </p>
+        <p>Category: Gaming</p>
+        <br>
+        <a href="valo.html">View Event</a>
+        <button onclick="addToCalendar()">Add to Calendar</button>
+    </div>
+</div>
+  </div>
+</div>
+          
+    </body>
+</html>
